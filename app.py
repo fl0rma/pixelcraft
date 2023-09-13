@@ -49,9 +49,12 @@ def index():
 #This line is executed when a GET request is made to the root URL or after processing a POST request. It renders the "index.html" template without any additional context.
 
 if __name__ == "__main__":
-    #app.run(debug=True)
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+    app.run(debug=True)
+    # from waitress import serve
+    # serve(app, host="0.0.0.0", port=8080)
+
+    
+
 #This block checks if the script is being run directly (not imported as a module). 
 #If it's being run directly, the app.run() function starts the Flask development server. The debug=True parameter enables debugging mode.
 

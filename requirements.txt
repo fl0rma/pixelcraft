@@ -9,7 +9,7 @@ pandas
 pillow
 # python==3.8.0
 # waitress==2.1.2
-waitress
-
+# waitress
+gunicorn
 
 
