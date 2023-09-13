@@ -25,8 +25,7 @@ def numpy_array_to_base64_image(numpy_array):
 def index():
     if request.method == "POST":
         desired_pattern = (request.form.get('pattern_type'))
-        count = (request.form.get('count'))
-        fabric_choice = (request.form.get('fabric_choice'))       
+        count = (request.form.get('count'))     
         uploaded_file = request.files["file"]
 
         if uploaded_file.filename != "":
@@ -49,7 +48,7 @@ def index():
 #This line is executed when a GET request is made to the root URL or after processing a POST request. It renders the "index.html" template without any additional context.
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5001)
     # from waitress import serve
     # serve(app, host="0.0.0.0", port=8080)
 

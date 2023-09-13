@@ -9,13 +9,6 @@ import pandas as pd
 def processing_image(uploaded_file, desired_pattern, count):
    
 # ### 2. Cartoon Effect
-    # def read_file(filename):
-    #     img = cv2.imread(filename)
-    #     cv2_imshow(img)
-    #     return img
-    # BORRAR
-    # print(uploaded_file)
-    # img = cv2.imread(uploaded_file)  # Read the image from the inputs
     img = uploaded_file  # Read the image from the inputs
 
     #Detect the edge in an image by using the cv2.adaptiveThreshold() function for a cartoon effect.
@@ -71,7 +64,18 @@ def processing_image(uploaded_file, desired_pattern, count):
     cartoon = cv2.bitwise_and(blurred, blurred, mask=edges)
 
 # ### 3. Pattern processing
-    new_width  = 1000
+    count = int(count)
+    if count <= 60:
+        new_width = 1000
+    elif count >60 & count <= 120:
+        new_width = 2000
+    elif count >120 & count <= 180:
+        new_width = 3000
+    elif count >180 & count <= 240:
+        new_width = 4000
+    elif count >240:
+        new_width = 5000
+    
     pixel_size = int(new_width / int(count))
 
     # Get the current height and width of the image
