@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- url_for('static', filename='...') is how we point to static files like styles and images in flask -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}"/> -->
+    <link rel="stylesheet" href="../static/styles/style.css" />
+    <title>Pixelcraft</title>
+  </head>
+
+  <body>
+
+    <div class="top-section">
+
+      <div class="section-1">
+        <div class="logo-container">
+          <!-- url_for('static', filename='...') is how we point to static files like styles and images in flask -->
+          <!-- <img class="logo" src="{{ url_for('static',filename='assets/pixelcraft_logo.png') }}" alt="logo"/> -->
+          <img
+            class="logo"
+            src="../static/assets/pixelcraft_logo.png" 
+            alt="logo"
+          />
+        </div>
+        <div class="example-container">
+          <img src="../static/assets/flower.jpeg" alt="flower" />
+          <img src="../static/assets/final_pattern.png" alt="pattern" />
+        </div>
+        <div class="arrow-container">
+          <img src="../static/assets/arrow.png" alt="arrow" />
+        </div>
+      </div>
+
+      <div class="section-2">
+        <h1>PICTURE TO PIXEL ART!</h1>
+        <p>Turn your images into art with ease!</p>
+        <p>Whether you love Lego mosaics or cross-stitch, our tool customizes pixelated masterpieces.</p>
+        <p>Unleash your creativity - upload an image, select a pattern, and let's craft your imagination into reality, one pixel at a time.</p>
+        <p class="start-p">Ready to start?</p>
+  
+        <form method="POST" action="/" enctype="multipart/form-data">
+          <div>
+          <label for="pattern_type"> What type of pattern do you want?</label>
+          <select name="pattern_type" required>
+            <option value="">select one</option>
+            <option value="lego" selected>LEGO pattern</option>
+            <option value="cross_stitch">Cross Stitch pattern</option>
+          </select>
+        </div>
+        <div>
+          <label for="count"
+            >How many pieces/stitches, each conforming to the width of the desired
+            pattern, will there be? (20-300):</label
+          >
+          <input
+            type="number"
+            id="count"
+            name="count"
+            min="25"
+            max="300"
+            value="60"
+          />
+        </div>
+          <details>
+            <summary>Click here for pieces/stitches guide. Approximate final width (in cm)</summary>
+            <table>
+              <thead>
+                <tr>
+                  <th>type/count</th>
+                  <th>25</th>
+                  <th>50</th>
+                  <th>75</th>
+                  <th>100</th>
+                  <th>125</th>
+                  <th>150</th>
+                  <th>175</th>
+                  <th>200</th>
+                  <th>225</th>
+                  <th>250</th>
+                  <th>275</th>
+                  <th>300</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aida 6 count</td>
+                  <td>10</td>
+                  <td>21</td>
+                  <td>31</td>
+                  <td>42</td>
+                  <td>52</td>
+                  <td>63</td>
+                  <td>73</td>
+                  <td>83</td>
+                  <td>94</td>
+                  <td>104</td>
+                  <td>115</td>
+                  <td>125</td>
+                </tr>
+                <tr>
+                  <td>Aida 8 count</td>
+                  <td>8</td>
+                  <td>16</td>
+                  <td>23</td>
+                  <td>31</td>
+                  <td>39</td>
+                  <td>47</td>
+                  <td>55</td>
+                  <td>63</td>
+                  <td>70</td>
+                  <td>78</td>
+                  <td>86</td>
+                  <td>94</td>
+                </tr>
+                <tr>
+                  <td>Aida 11 count</td>
+                  <td>6</td>
+                  <td>11</td>
+                  <td>17</td>
+                  <td>23</td>
+                  <td>28</td>
+                  <td>34</td>
+                  <td>40</td>
+                  <td>45</td>
+                  <td>51</td>
+                  <td>57</td>
+                  <td>63</td>
+                  <td>68</td>
+                </tr>
+                <tr>
+                  <td>Aida 14 count</td>
+                  <td>5</td>
+                  <td>9</td>
+                  <td>14</td>
+                  <td>19</td>
+                  <td>23</td>
+                  <td>28</td>
+                  <td>32</td>
+                  <td>37</td>
+                  <td>42</td>
+                  <td>46</td>
+                  <td>51</td>
+                  <td>56</td>
+                </tr>
+                <tr>
+                  <td>Aida 16 count</td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>12</td>
+                  <td>16</td>
+                  <td>20</td>
+                  <td>23</td>
+                  <td>27</td>
+                  <td>31</td>
+                  <td>35</td>
+                  <td>39</td>
+                  <td>43</td>
+                  <td>47</td>
+                </tr>
+                <tr>
+                  <td>Aida 18 count</td>
+                  <td>3</td>
+                  <td>7</td>
+                  <td>10</td>
+                  <td>14</td>
+                  <td>17</td>
+                  <td>21</td>
+                  <td>24</td>
+                  <td>28</td>
+                  <td>31</td>
+                  <td>35</td>
+                  <td>38</td>
+                  <td>42</td>
+                </tr>
+                <tr>
+                  <td>Aida 20 count</td>
+                  <td>3</td>
+                  <td>6</td>
+                  <td>9</td>
+                  <td>13</td>
+                  <td>16</td>
+                  <td>19</td>
+                  <td>22</td>
+                  <td>25</td>
+                  <td>28</td>
+                  <td>31</td>
+                  <td>34</td>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <td>LEGO</td>
+                  <td>20</td>
+                  <td>39</td>
+                  <td>59</td>
+                  <td>78</td>
+                  <td>98</td>
+                  <td>117</td>
+                  <td>137</td>
+                  <td>156</td>
+                  <td>176</td>
+                  <td>195</td>
+                  <td>215</td>
+                  <td>234</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+          <div>
+            <label for="fabric_choice"
+            >What type of fabric will you use? (only for Cross
+            Stitchpatterns)</label
+          >
+          <select name="fabric_choice" required>
+            <option value="1">Aida 6 count</option>
+            <option value="2">Aida 8 count</option>
+            <option value="3">Aida 11 count</option>
+            <option value="4" selected>Aida 14 count</option>
+            <option value="5">Aida 16 count</option>
+            <option value="6">Aida 18 count</option>
+            <option value="7">Aida 20 count</option>
+          </select>
+  
+          </div>
+  
+          <input type="file" name="file" accept=".jpg, .jpeg, .png" />
+          <div>
+            <button class="button" type="submit">Upload Image</button>
+            {% if image_base64 %}
+              <img
+                class="preview-img"
+                src="data:image/png;base64,{{ image_base64 }}"
+                alt="Processed Image"
+                width="50px"
+              />
+              <b>Ready! See the image details below!</b>
+              <!-- <img class="preview-img" src="../static/assets/temp.png" alt="temp" width="50px"> -->
+            {% endif %}
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if image_base64 %}
+
+    <div class="bottom-section">
+      <!-- this adds some simple programming logic in Flask. "image" is passed in the Flask render. -->
+      <div class="pattern-container">
+        <h1>Patterned Perfection</h1>
+        <img
+          src="data:image/png;base64,{{ image_base64 }}"
+          alt="Processed Image"
+        />
+        <!-- <img src="../static/assets/temp.png" alt="temp"> -->
+      </div>
+  
+      <!-- Container for the HTML table -->
+      <div class="table-container">
+        <h1>Pattern Color Key</h1>
+        <!-- Include the HTML table using the color_table_html variable -->
+        {{ color_table_html | safe }}
+      </div>
+      
+    </div>
+    {% endif %}
+    
+  </body>
+</html>

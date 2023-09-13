@@ -1,0 +1,41 @@
+color,R,G,B,LEGO Name,LEGO Name 2,Element ID , Design ID
+"(114, 14, 15)",114,14,15,Dark Red,"154 ['Dark red', 'NEW DARK RED']",4539114,3024
+"(255, 105, 143)",255,105,143,Coral,353 ['Coral'],6258091,3024
+"(228, 173, 200)",228,173,200,Bright Pink,"222 ['Light Purple', 'LGH. PURPLE']",6031883,3024
+"(200, 112, 160)",200,112,160,Dark Pink,"221 ['Bright Purple', 'BR. PURPLE']",6217797,3024
+"(146, 57, 120)",146,57,120,Magenta,"124 ['Bright reddish violet', 'BR.RED-VIOL.']",6096942,3024
+"(172, 120, 186)",172,120,186,Medium Lavender,"324 ['Medium Lavender', 'MEDIUM LAVENDEL']",6099363,3024
+"(225, 213, 237)",225,213,237,Lavender,325 ['Lavender'],6099363,3024
+"(63, 54, 145)",63,54,145,Dark Purple,"268 ['Medium Lilac', 'M. LILAC']",6231376,3024
+"(0, 85, 191)",0,85,191,Blue,"23 ['Bright Blue', 'BR.BLUE']",302423,3024
+"(90, 147, 219)",90,147,219,Medium Blue,"102 ['Medium blue', 'MD.BLUE']",4179826,3024
+"(10, 52, 99)",10,52,99,Dark Blue,140 ['Earth blue'],4184108,3024
+"(159, 195, 233)",159,195,233,Bright Light Blue,"212 ['Light Royal blue', 'LGH. ROY. BLUE']",6184484,3024
+"(7, 139, 201)",7,139,201,Dark Azure,321 ['Dark Azur'],6151664,3024
+"(54, 174, 191)",54,174,191,Medium Azure,"322 ['Medium Azure', 'MEDIUM AZUR']",6097493,3024
+"(0, 143, 155)",0,143,155,Dark Turquoise,"107 ['Bright bluish green', 'BR.BLUEGREEN']",6213778,3024
+"(173, 195, 192)",173,195,192,Light Aqua,323 ['Aqua'],6058016,3024
+"(24, 70, 50)",24,70,50,Dark Green,"141 ['Earth Green', 'EARTH GREEN']",6055169,3024
+"(160, 188, 172)",160,188,172,Sand Green,151 ['Sand green'],6099189,3024
+"(35, 120, 65)",35,120,65,Green,"28 ['Dark green', 'DK.GREEN']",302428,3024
+"(75, 159, 74)",75,159,74,Bright Green,"37 ['Bright Green', 'BR.GREEN']",6401817,3024
+"(187, 233, 11)",187,233,11,Lime,"119 ['Br. yellowish green', 'BR.YEL-GREEN']",4621557,3024
+"(155, 154, 90)",155,154,90,Olive Green,"330 ['Olive Green', 'OLIVE GREEN']",6058245,3024
+"(255, 240, 58)",255,240,58,Bright Light Yellow,"226 ['Cool Yellow', 'COOL YEL.']",6058014,3024
+"(242, 205, 55)",242,205,55,Yellow,"24 ['Bright yellow', 'BR.YEL']",302424,3024
+"(248, 187, 61)",248,187,61,Bright Light Orange,"191 ['Flame yellowish orange', 'FL. YELL-ORA']",6073040,3024
+"(228, 205, 158)",228,205,158,Tan,"5 ['Brick yellow', 'BRICK-YEL']",4159553,3024
+"(149, 138, 115)",149,138,115,Dark Tan,138 ['Sand yellow'],4549436,3024
+"(53, 33, 0)",53,33,0,Dark Brown,"308 ['Dark Brown', 'DK. BROWN']",6194729,3024
+"(246, 215, 179)",246,215,179,Light Nougat,"283 ['Light Nougat', 'L.NOUGAT']",6357797,3024
+"(169, 85, 0)",169,85,0,Dark Orange,"38 ['Dark Orange', 'DK.ORA']",6186012,3024
+"(254, 138, 24)",254,138,24,Orange,"106 ['Bright orange', 'BR.ORANGE']",4524929,3024
+"(170, 125, 85)",170,125,85,Medium Nougat,"312 ['Medium Nougat', 'M. NOUGAT']",6215606,3024
+"(208, 145, 104)",208,145,104,Nougat,18 ['Nougat'],6330584,3024
+"(88, 42, 18)",88,42,18,Reddish Brown,"192 ['Reddish Brown', 'RED. BROWN']",4221744,3024
+"(201, 26, 9)",201,26,9,Red,"21 ['Bright red', 'BR.RED']",302421,3024
+"(160, 165, 169)",160,165,169,Light Bluish Gray,"194 ['Medium stone grey', 'MED. ST-GREY']",4211399,3024
+"(108, 110, 104)",108,110,104,Dark Bluish Gray,"199 ['Dark stone grey', 'DK. ST. GREY']",4210719,3024
+"(5, 19, 29)",5,19,29,Black,"26 ['Black', 'BLACK']
+342 ['CONDUCT. BLACK']",302426,3024
+"(255, 255, 255)",255,255,255,White,1 ['White'],302401,3024
