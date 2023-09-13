@@ -1,14 +1,7 @@
 
-
 <div align="center">
-  <img src="images/project-logo.png" alt="Project Logo" width="300" />
+  <img src="static/assets/pixelcraft_logo.png" alt="Project Logo" width="350" />
 </div>
-
-
-
-
-![Alt Text](static/assets/pixelcraft_logo.png)
-
 
 # Pixelcraft
 ## Color Pattern Processing Web App
