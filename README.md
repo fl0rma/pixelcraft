@@ -1,4 +1,17 @@
-# Color Pattern Processing Web App
+
+
+<div align="center">
+  <img src="images/project-logo.png" alt="Project Logo" width="300" />
+</div>
+
+
+
+
+![Alt Text](static/assets/pixelcraft_logo.png)
+
+
+# Pixelcraft
+## Color Pattern Processing Web App
 
 This is a web application built with Flask for processing images into color patterns. The application allows users to upload an image, choose a desired pattern type, and specify the number of colors to be used in the pattern. The processed image is displayed along with a color legend.
 
