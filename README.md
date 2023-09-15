@@ -4,9 +4,9 @@
 </div>
 
 # Pixelcraft
-## Color Pattern Processing Web App
+## Pattern Processing Web App
 
-This is a web application built with Flask for processing images into color patterns. The application allows users to upload an image, choose a desired pattern type, and specify the number of pieces/stitches to be used in the pattern. The processed image is displayed along with a color legend.
+This is a web application built with Flask for processing images into pixelated patterns. The application allows users to upload an image, choose a desired pattern type, and specify the number of pieces/stitches to be used in the pattern. The processed image is displayed along with a color legend.
 
 ## Prerequisites
 Create a virtual environment using Python version 3.8. This will allow to manage dependencies and isolate the project.

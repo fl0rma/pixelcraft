@@ -188,21 +188,21 @@ def processing_image(uploaded_file, desired_pattern, count):
             result_image[y:y+square_size, x:x+square_size] = closest_color
         
             # Overlay the symbol on top of the square
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            font_scale = (pixel_size / 50)
-            font_color = (0, 0, 0)  # Black font color
-            font_thickness = 1
+            #font = cv2.FONT_HERSHEY_SIMPLEX
+            #font_scale = (pixel_size / 50)
+            #font_color = (0, 0, 0)  # Black font color
+            #font_thickness = 1
               
             # Calculate the text size to determine the width and height of the text
-            (text_width, text_height), _ = cv2.getTextSize(str(symbol), font, font_scale, font_thickness)
+            #(text_width, text_height), _ = cv2.getTextSize(str(symbol), font, font_scale, font_thickness)
 
             # Calculate the position (org) to center the text within the square
-            x_centered = x + (square_size - text_width) // 2
-            y_centered = y + (square_size + text_height) // 2
-            org = (x_centered, y_centered)
+            #x_centered = x + (square_size - text_width) // 2
+            #y_centered = y + (square_size + text_height) // 2
+            #org = (x_centered, y_centered)
 
             # Overlay the symbol on top of the square
-            cv2.putText(result_image, str(symbol), org, font, font_scale, font_color, font_thickness)
+            #cv2.putText(result_image, str(symbol), org, font, font_scale, font_color, font_thickness)
 
     # Convert the modified image back to RGB color space
     result_image_rgb = cv2.cvtColor(result_image, cv2.COLOR_BGR2RGB)
