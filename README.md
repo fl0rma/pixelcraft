@@ -4,6 +4,9 @@
 </div>
 
 # Pixelcraft
+
+See the deployed website [here](https://fl0rma.pythonanywhere.com/)
+
 ## Pattern Processing Web App
 
 This is a web application built with Flask for processing images into pixelated patterns. The application allows users to upload an image, choose a desired pattern type, and specify the number of pieces/stitches to be used in the pattern. The processed image is displayed along with a color legend.
@@ -33,9 +36,9 @@ Before running the application, ensure you have the following libraries installe
 
 4. Open a web browser and go to [http://localhost:5000](http://localhost:5000).
 
-5. Use the web interface to upload an image, select a pattern type ("lego" or "thread"), and specify the desired count of pieces/stitches.
+5. Use the web interface to upload an image, select a pattern type ("lego" or "cross-stitch"), and specify the desired count of pieces/stitches.
 
-6. Click the "Upload Image" button to generate the color pattern.
+6. Click the "Upload Image" button to generate the pattern.
 
 7. The processed image will be displayed along with a color legend.
 
@@ -47,11 +50,15 @@ The application uses the following main steps to process an image:
 
 2. **Cartoon Effect**: The uploaded image is processed to create a cartoon effect using edge detection, color quantization, and bilateral filtering.
 
-3. **Pattern Processing**: Users can choose between "lego" and "thread" patterns. The pixelated image is further processed based on the selected pattern type.
+3. **Pattern Processing**: Users can choose between "lego" and "cross-stitch" patterns. The pixelated image is further processed based on the selected pattern type.
 
 4. **Legend Generation**: A legend is generated that shows the colors used in the pattern and their corresponding symbols.
 
 5. **Display**: The processed image and color legend are displayed on the web page.
+
+## Deployment
+
+App was deployed using pythonanywhere.com
 
 ## Customization
 
