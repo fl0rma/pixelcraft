@@ -188,30 +188,50 @@ def processing_image(uploaded_file, desired_pattern, count):
             result_image[y:y+square_size, x:x+square_size] = closest_color
         
             # Overlay the symbol on top of the square
-            #font = cv2.FONT_HERSHEY_SIMPLEX
-            #font_scale = (pixel_size / 50)
-            #font_color = (0, 0, 0)  # Black font color
-            #font_thickness = 1
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            font_scale = (pixel_size / 50)
+            font_color = (0, 0, 0)  # Black font color
+            font_thickness = 1
               
             # Calculate the text size to determine the width and height of the text
-            #(text_width, text_height), _ = cv2.getTextSize(str(symbol), font, font_scale, font_thickness)
+            (text_width, text_height), _ = cv2.getTextSize(str(symbol), font, font_scale, font_thickness)
 
             # Calculate the position (org) to center the text within the square
-            #x_centered = x + (square_size - text_width) // 2
-            #y_centered = y + (square_size + text_height) // 2
-            #org = (x_centered, y_centered)
+            x_centered = x + (square_size - text_width) // 2
+            y_centered = y + (square_size + text_height) // 2
+            org = (x_centered, y_centered)
 
             # Overlay the symbol on top of the square
-            #cv2.putText(result_image, str(symbol), org, font, font_scale, font_color, font_thickness)
+            cv2.putText(result_image, str(symbol), org, font, font_scale, font_color, font_thickness)
 
     # Convert the modified image back to RGB color space
+    result_image_rgb_symbols = cv2.cvtColor(result_image, cv2.COLOR_BGR2RGB)
+
+
+
+# Use color_to_symbol to map colors to symbols in result_image
+    for y in range(0, bgr_image.shape[0], square_size):
+        for x in range(0, bgr_image.shape[1], square_size):
+            square = bgr_image[y:y+square_size, x:x+square_size]
+            square_color = tuple(np.mean(square, axis=(0, 1), dtype=int))
+            closest_color = find_closest_color(square_color)
+        
+            # Get the symbol for the closest color from the dictionary
+            symbol = color_to_symbol.get(closest_color, 'N/A')  # Add a default value for debugging
+        
+            # Replace the colors in the square with the closest color
+            result_image[y:y+square_size, x:x+square_size] = closest_color
+        
+    # Convert the modified image back to RGB color space
     result_image_rgb = cv2.cvtColor(result_image, cv2.COLOR_BGR2RGB)
+
 
     # Determine the gridline spacing based on pixel size
     gridline_spacing = pixel_size
 
     # Create a copy of the pixelated image to draw gridlines on
     image_with_gridlines = result_image_rgb.copy()
+    image_with_gridlines_symbols = result_image_rgb_symbols.copy() 
 
     # Draw vertical gridlines -  iterates over the coordinates of the image and draws black lines 
     for x in range(0, pixelated_image.shape[1], gridline_spacing):
@@ -220,6 +240,15 @@ def processing_image(uploaded_file, desired_pattern, count):
     # Draw horizontal gridlines  -  iterates over the coordinates of the image and draws black lines 
     for y in range(0, pixelated_image.shape[0], gridline_spacing):
         cv2.line(image_with_gridlines, (0, y), (pixelated_image.shape[1], y), (0, 0, 0), 1)  
+
+
+       # Draw vertical gridlines -  iterates over the coordinates of the image and draws black lines 
+    for x in range(0, pixelated_image.shape[1], gridline_spacing):
+        cv2.line(image_with_gridlines_symbols , (x, 0), (x, pixelated_image.shape[0]), (0, 0, 0), 1)  
+
+    # Draw horizontal gridlines  -  iterates over the coordinates of the image and draws black lines 
+    for y in range(0, pixelated_image.shape[0], gridline_spacing):
+        cv2.line(image_with_gridlines_symbols , (0, y), (pixelated_image.shape[1], y), (0, 0, 0), 1)  
 
     #cv2.imwrite('image_with_gridlines.png', image_with_gridlines)
 
@@ -249,6 +278,6 @@ def processing_image(uploaded_file, desired_pattern, count):
     columns_to_drop = ['color','R', 'G','B',]
     color_table.drop(columns_to_drop, axis=1, inplace=True)
 
-    data = {'image_with_gridlines': image_with_gridlines, 'color_table':color_table}
+    data = {'image_with_gridlines': image_with_gridlines, 'image_with_gridlines_symbols':image_with_gridlines_symbols, 'color_table':color_table}
 
     return data

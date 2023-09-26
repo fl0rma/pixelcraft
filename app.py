@@ -35,13 +35,14 @@ def index():
             
             # Convert the NumPy array to a base64-encoded image
             image_base64 = numpy_array_to_base64_image(processedData['image_with_gridlines'])
+            image_base64_symbols = numpy_array_to_base64_image(processedData['image_with_gridlines_symbols'])
         
 
             # Create an HTML table from the color_table DataFrame
             color_table_html = df_to_html(processedData['color_table'])
     
 
-            return render_template("index.html", image_base64=image_base64, color_table_html=color_table_html)   
+            return render_template("index.html", image_base64=image_base64, image_base64_symbols=image_base64_symbols, color_table_html=color_table_html)   
 
     return render_template("index.html")
 

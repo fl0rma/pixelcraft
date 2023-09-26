@@ -2,7 +2,7 @@
 flask
 numpy==1.21.1
 # opencv==4.5.0
-opencv
+opencv-python
 # pandas==2.0.0
 pandas
 # pillow==8.3.1

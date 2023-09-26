@@ -51,7 +51,7 @@
         <div>
           <label for="count"
             >How many pieces/stitches, each conforming to the width of the desired
-            pattern, will there be? (20-300):</label
+            pattern, will there be? (25-300):</label
           >
           <input
             type="number"
@@ -232,18 +232,35 @@
       <!-- this adds some simple programming logic in Flask. "image" is passed in the Flask render. -->
       <div class="pattern-container">
         <h1>Patterned Perfection</h1>
-        <img
-          src="data:image/png;base64,{{ image_base64 }}"
-          alt="Processed Image"
-        />
-        <!-- <img src="../static/assets/temp.png" alt="temp"> -->
+        <details>
+          <summary class="button button-summary">click to see image </summary>
+          <img
+            src="data:image/png;base64,{{ image_base64 }}"
+            alt="Processed Image"
+          />
+          <!-- <img src="../Pikachu.jpg" alt="temp"> -->
+      </details>
       </div>
-  
+      <div class="pattern-container">
+        <h1>Patterned Perfection with Color Key</h1>
+        <details>
+          <summary class="button button-summary">click to see image</summary>
+          <img
+            src="data:image/png;base64,{{image_base64_symbols}}"
+            alt="Processed Image"
+          />
+          <!-- <img src="../Pikachu.jpg" alt="temp"> -->
+        </details>
+      </div>      
+      
       <!-- Container for the HTML table -->
       <div class="table-container">
         <h1>Pattern Color Key</h1>
-        <!-- Include the HTML table using the color_table_html variable -->
-        {{ color_table_html | safe }}
+        <details>
+          <summary class="button button-summary">click to see table</summary>
+          <!-- Include the HTML table using the color_table_html variable -->
+          {{ color_table_html | safe }}
+        </details>
       </div>
       
     </div>
