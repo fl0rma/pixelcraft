@@ -252,7 +252,7 @@ def processing_image(uploaded_file, desired_pattern, count):
 
     #cv2.imwrite('image_with_gridlines.png', image_with_gridlines)
 
-# ### 4. Prepare legend
+# ### 4. Prepare legend.
 
     # Convert the dictionary to a DataFrame
     colors_total = pd.DataFrame(list(square_colors.items()), columns=["color", "count"])
